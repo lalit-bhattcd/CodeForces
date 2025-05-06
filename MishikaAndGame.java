@@ -17,8 +17,7 @@ public class MishikaAndGame {
             else{
                 continue;
             }
-        }
-
+        
         if(mishWon > chrisWon){
             System.out.println("Mishika");
         }
