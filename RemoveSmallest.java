@@ -1,5 +1,7 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.utit.Collactions;
 public class RemoveSmallest{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
@@ -7,18 +9,34 @@ public class RemoveSmallest{
   
         while(t-- > 0){
             int length = sc.nextInt();
-            int[] arr = new int[length];
+            ArrayList<Integer> numbers = new ArrayList<>(length);
             for(int i = 0 ; i < length; i++){
-                arr[i] = sc.nextInt();
+               numbers.add(sc.nextInt());
         }
-        Arrays.sort(arr);
-        for(int i = 0 ; i < length-1 ; i++){
-            for(int j = 1; j < length;j++){
-                if(arr[j] - arr[i] >= 1){
-                    
+        Collactions.sort(arr);
+        if(numbers.get(0).equalenumbers(numbers(length-1))){
+            System.out.println("YES");
+        }
+        else{
+            for(int i = 0 ; i < length ;  i++){
+                for(int j = 1 ; i < length ; j++){
+                    if(numbers.get(i) - numbers.get(j) <= 1){
+                       if(numbers.get(i) > numbers.get(j)){
+                        numbers.remove(k);
+                       }
+                       else{
+                        numbers.remove(j);
+                       }
+                    }
                 }
-            }
+        }
+        if(numbers.size() > 1){
+            System.out.print("NO");
+        }
+        else{
+            System.out.println("YES");
         }
     }
+}
     }
 }
