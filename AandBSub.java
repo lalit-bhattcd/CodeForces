@@ -11,7 +11,7 @@ public class AandBSub {
             String afterChar = "";
             int sum = 0;
             for(int i = 0 ; i < input.length() ; i++){
-                whilen(input.charAt(i) != '+'){
+                while(input.charAt(i) != '+'){
                     PastChar += String.valueOf(input.charAt(i));
                 }   
                     i++;
