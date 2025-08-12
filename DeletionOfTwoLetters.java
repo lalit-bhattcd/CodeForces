@@ -9,7 +9,7 @@ public class Main {
             char c = sc.next().charAt(0);
             boolean possible = false;
 
-            for (int i = 0; i < s.length(); i++) {
+            for (int i = 0; i < s.length(); i++) {cd
                 if (s.charAt(i) == c && i % 2 == 0) { // 0-based even index means odd position
                     possible = true;
                     break;
